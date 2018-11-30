@@ -5,8 +5,9 @@ module.exports = function(server) {
   var router = server.loopback.Router();
   router.get('/', server.loopback.status());
 
-  router.get('/nuevaApp', (req,res) => {
-    return res.status(200).send({meq: "meq"})
+  router.post('/nuevaAppMongo', (req,res) => {
+
+    return res.status(200).send(req.body)
   });
 
 
