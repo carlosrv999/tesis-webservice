@@ -6,7 +6,7 @@ module.exports = function(server) {
   router.get('/', server.loopback.status());
 
   router.post('/nuevaAppMongo', (req,res) => {
-
+    console.log(req.body);
     return res.status(200).send(req.body)
   });
 
